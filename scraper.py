@@ -16,7 +16,7 @@ with open('ELEC390_Lab2.txt','a') as f:
         temp_section = day.find('div', class_="DetailsSummary--temperature--1kVVp")
         span_tags = temp_section.find_all('span')
         max_temp = span_tags[0].text
-        min_temp = span_tags[1].span.text
+        min_temp = span_tags[1].span
         # print(max_temp)
         # print(min_temp)
         weather_condition = day.find('div', class_="DetailsSummary--condition--2JmHb").span.text
